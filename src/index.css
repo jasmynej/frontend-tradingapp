@@ -1,3 +1,90 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredoka+One&family=Questrial&family=Signika:wght@300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Signika', sans-serif;
+}
+h1,h2,h3,h4 h5, h6 {
+    font-family: 'Fredoka One', cursive;
+}
+
+.main-container {
+    @apply flex flex-col justify-between h-screen;
+}
+
+.announcement-bar {
+    background-color:#f7f16f;
+    @apply text-center;
+}
+
+.announcement-bar h1 {
+    @apply text-2xl;
+}
+.nav-container {
+    
+    @apply border-t-8;
+    @apply h-20;
+    @apply shadow-md shadow-amber-100;
+    border-top-color:#B4EAEC;
+}
+
+.nav-content {
+    @apply mx-2;
+    @apply my-2;
+    @apply flex flex-row;
+    @apply items-center self-center;
+   
+}
+
+#search {
+    @apply border-2 rounded;
+    @apply w-3/4 p-2;
+    
+}
+
+.nav-buttons {
+    flex:10%;
+    @apply flex flex-row mx-1;
+    @apply items-center justify-between;
+}
+
+
+.nav-search {
+    flex:50%;
+    @apply text-center;
+}
+.nav-content h1{
+    @apply text-xl;
+
+}
+.content {
+    @apply mb-auto h-auto grow  overflow-auto;
+}
+
+.footer {
+    border-top-color:#f7f16f;
+    @apply flex flex-row;
+    @apply h-10 border-t-2;
+    @apply justify-around items-center;
+}
+
+.group-filters {
+    @apply flex flex-row;
+    @apply justify-around items-center;
+    @apply p-2;
+    @apply border-b-2;
+    border-bottom-color:#f7f16f;
+}
+
+.filter {
+    background-color:#C6F8F8;
+    @apply p-2 text-center rounded-full;
+
+}
+
+.filter:hover{
+    background-color:#9ecccc;
+}
