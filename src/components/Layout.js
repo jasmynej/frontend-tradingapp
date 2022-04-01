@@ -1,6 +1,9 @@
-
+import {useState} from 'react'
+import { useNavigate } from "react-router-dom";
 function Layout({children}){
     let groups = ['BTS','Twice','Red Velvet','Got7','NCT','Monsta X']
+    const [loggedIn,setLoggedIn] = useState(false)
+    let navigate = useNavigate();
     return (
         <div className="main-container">
             <div className="announcement-bar">
@@ -18,10 +21,21 @@ function Layout({children}){
                         </form>
                     </div>
                     <div className="nav-buttons">
-                        <p>sell/trade</p>
-                        <p>messages</p>
-                        <p>notifications</p>
-                        <p>profile</p>
+                        {
+                            !loggedIn ?
+                            <div  className="nav-buttons">
+                                <button id="sign-up">Sign Up</button>
+                                <button id="log-in" onClick={() => {navigate("/login")}}>Log In</button>
+                            </div>
+                            :
+                            <div  className="nav-buttons">
+                                <p>sell/trade</p>
+                                <p>messages</p>
+                                <p>notifications</p>
+                                <p>profile</p>
+                            </div>
+                        }
+                        
                     </div>
                 </div>
             </div>

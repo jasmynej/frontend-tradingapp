@@ -3,15 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import App from './App'
+import LogIn from './screens/LogIn';
 import Layout from './components/Layout'
+import Profile from './screens/Profile'
 ReactDOM.render(
   <BrowserRouter>
-    <Layout>
+   
       <Routes>
         <Route path="/" element={<App/>} />
+        <Route path="/login" element={<LogIn/>} />
+        <Route path="/:username" element={<Profile/>} />
       </Routes>
-    </Layout>
-    
+   
   </BrowserRouter>,
   document.getElementById('root')
 );

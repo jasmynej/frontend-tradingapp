@@ -46,7 +46,7 @@ h1,h2,h3,h4 h5, h6 {
 }
 
 .nav-buttons {
-    flex:10%;
+    flex:5%;
     @apply flex flex-row mx-1;
     @apply items-center justify-between;
 }
@@ -87,4 +87,18 @@ h1,h2,h3,h4 h5, h6 {
 
 .filter:hover{
     background-color:#9ecccc;
+}
+
+#sign-up {
+    background-color:#DCCCF4;
+
+}
+
+#sign-up:hover {
+    background-color:#dcccf496; 
+}
+
+button {
+    font-size:20px;
+    @apply p-2 rounded-xl;
 }
