@@ -1,23 +1,27 @@
 import "../styles/auth.css"
 import {authService} from "../helpers/auth_methods"
 import { useNavigate } from "react-router-dom";
+import {useState} from 'react'
 function LogIn(){
     let navigate = useNavigate();
+    const [loggedIn,setLoggedIn] = useState(false)
     const loginSubmit = (event) => {
         event.preventDefault()
         let username = event.target[0].value;
         let password = event.target[1].value;
+
         authService.login(username,password).then(function(res){
             if(res){
-               
+               setLoggedIn(true)
+               navigate(`/${username}`)
                 console.log("redirect")
             }
             else{
                 console.log("get errs")
             }
         });
-
-        //useNavigate(`/${username}`)
+        
+        
        
         
         

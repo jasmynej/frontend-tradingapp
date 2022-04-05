@@ -1,0 +1,12 @@
+.profile-container {
+    @apply container mx-auto my-2;
+}
+
+#pfp {
+    width:150px;
+    @apply rounded-full;
+}
+
+.user-details {
+    @apply flex flex-row;
+}
