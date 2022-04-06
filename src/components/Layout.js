@@ -43,7 +43,7 @@ function Layout({children}){
                         {
                             !loggedIn ?
                             <div  className="nav-buttons">
-                                <button id="sign-up">Sign Up</button>
+                                <button id="sign-up" onClick={() => {navigate("/create-account")}}>Sign Up</button>
                                 <button id="log-in" onClick={() => {navigate("/login")}}>Log In</button>
                             </div>
                             :

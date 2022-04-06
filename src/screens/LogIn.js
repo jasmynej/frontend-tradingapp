@@ -30,7 +30,7 @@ function LogIn(){
         <div className="auth-container">
             <div className="login-container">
                 <h1>Login</h1>
-                <form id="login" onSubmit={loginSubmit}>
+                <form id="auth-form" onSubmit={loginSubmit}>
                     <label>Username</label>
                     <br/>
                     <input type="text" name="username"/>
@@ -40,7 +40,7 @@ function LogIn(){
                     <input type="password" name="password"/>
                     <br/>
                     <br/>
-                    <button id="login-btn">Login</button>
+                    <button id="auth-btn">Login</button>
                 </form>
             </div>
         </div>
