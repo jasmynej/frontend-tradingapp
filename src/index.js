@@ -6,6 +6,7 @@ import App from './App'
 import LogIn from './screens/LogIn';
 import Layout from './components/Layout'
 import Profile from './screens/Profile'
+import Admin from './screens/Admin';
 import Register from './screens/Register'
 ReactDOM.render(
   <BrowserRouter>
@@ -15,6 +16,7 @@ ReactDOM.render(
         <Route path="/login" element={<LogIn/>} />
         <Route path="/:username" element={<Profile/>} />
         <Route path="/create-account" element={<Register/>} />
+        <Route path='/admin' element={<Admin/>} />
       </Routes>
    
   </BrowserRouter>,

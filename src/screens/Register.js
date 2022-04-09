@@ -11,7 +11,7 @@ function Register(){
         password:"",
         password_comf:""
     })
-    const [errMsgs,setErrMsgs] = useState({})
+    const [errMsgs,setErrMsgs] = useState([])
 
     const registerChange = (event) => {
         let targ_name = event.target.name
@@ -39,8 +39,17 @@ function Register(){
     }
     return(
         <div className="auth-container">
+
             <div className="register-container">
                 <h1>Create Account</h1>
+                {
+                    errMsgs.length > 0 &&
+                    <div>
+                        {errMsgs.map((msg) => {
+                            <p>{msg}</p>
+                        })}
+                    </div>
+                }
                 <form id="auth-form" onSubmit={registerSubmit}>
                     <label>Email</label>
                     <input type="email" name="email" onChange={registerChange} />

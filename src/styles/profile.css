@@ -10,3 +10,22 @@
 .user-details {
     @apply flex flex-row;
 }
+
+#create {
+    background-color:#92E3E5;
+}
+
+.create-item-form{
+    display:flex;
+    flex-direction:column;
+}
+
+.create-item-form input {
+    @apply border-2;
+}
+
+.user-items {
+    display:flex;
+    flex-direction:row;
+    @apply flex-wrap;
+}
