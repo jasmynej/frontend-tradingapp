@@ -3,6 +3,7 @@
  import Item from "../components/Item";
  import {useState,useEffect} from 'react'
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import '../styles/profile.css'
  function Profile(){
     const api_host = process.env.REACT_APP_API_URL
@@ -12,7 +13,9 @@ import '../styles/profile.css'
      const [newItem,setNewItem] = useState({seller:localStorage.getItem('userId'),name:"",desc:"",price:0,trade:false,sold:false})
      const [recentItemId,setItemId] = useState(10)
      const [userItems,setUserItems] = useState([])
+
      let {username} = useParams()
+     let navigate = useNavigate();
      const getUser = () => {
          setLoading(true)
          axios.get(`${api_host}/users/${username}`)
@@ -78,7 +81,7 @@ import '../styles/profile.css'
                 </div>
                 <div className="user-dashboard">
                     <h2>Active Items</h2>
-                    <button id="create" onClick={toggleShow}>Sell/Trade Item</button>
+                    <button id="create" onClick={() => {navigate('/new-item')}}>Sell/Trade Item</button>
                     {showCreate &&
                         <div id="create-item-div">
                             <h3>add new item</h3>

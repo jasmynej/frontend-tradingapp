@@ -1,0 +1,29 @@
+.new-item-container {
+    background-color: #dcccf488;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.new-item-main {
+    display: flex;
+    justify-content: center;
+}
+
+.new-item-form {
+    margin: 20px;
+}
+
+.item-form-row {
+    margin: 20px;
+}
+
+.item-form-row label {
+    font-size: 20px;
+   
+}
+
+#submit-btn {
+    background-color:#92E3E5;
+}

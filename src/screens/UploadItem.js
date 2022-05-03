@@ -80,8 +80,7 @@ function UploadItem(){
                 <div className="new-item-container">
                     <h1>Upload Image(s)</h1>
                     <p>Item: {newItem.name} </p>
-                    <form className="new-item-form" encType="multipart/form-data" action={`${api_host}/images/item-image/${newItem.id}`} method="POST"></form>
-                                <input name="itemId" type="text" value={newItem.id}/>
+                    <form className="new-item-form" encType="multipart/form-data" action={`${api_host}/images/item-image/${newItem.id}`} method="POST">
                                 <label>Upload Image</label>
                                 <input type="file" name="item-image"/>
                                 <input type="submit"/>
