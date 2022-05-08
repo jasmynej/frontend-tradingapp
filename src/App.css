@@ -1,0 +1,5 @@
+.home-items {
+    display:flex;
+    flex-direction:row;
+    @apply flex-wrap;
+}

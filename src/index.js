@@ -9,6 +9,7 @@ import Profile from './screens/Profile'
 import Admin from './screens/Admin';
 import Register from './screens/Register'
 import UploadItem from './screens/UploadItem'
+import EditProfile from './screens/EditProfile';
 import UploadImage from './screens/UploadItemImage'
 ReactDOM.render(
   <BrowserRouter>
@@ -17,6 +18,7 @@ ReactDOM.render(
         <Route path="/" element={<App/>} />
         <Route path="/login" element={<LogIn/>} />
         <Route path="/:username" element={<Profile/>} />
+        <Route path='/:username/edit' element={<EditProfile/>}/>
         <Route path="/create-account" element={<Register/>} />
         <Route path='/admin' element={<Admin/>} />
         <Route path="/new-item" element={<UploadItem/>} />

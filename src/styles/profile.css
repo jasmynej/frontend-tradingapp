@@ -29,3 +29,20 @@
     flex-direction:row;
     @apply flex-wrap;
 }
+
+#edit {
+    background-color: #F7F16F;
+}
+
+#follow {
+    border-color: #C6F8F8;
+    border-width: 2px;
+}
+
+#follow:hover {
+    background-color:#C6F8F8;
+}
+
+#followed {
+    background-color:#C6F8F8;
+}

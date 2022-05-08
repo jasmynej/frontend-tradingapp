@@ -4,14 +4,15 @@ import ItemImage from './ItemImage'
 import '../styles/items.css'
 function Item ({id}) {
     const api_host = process.env.REACT_APP_API_URL
-    const [item,setItem] = useState({name:"",desc:"",imageData:""})
+    const [item,setItem] = useState({name:"",desc:""})
+    const [seller,setSeller] = useState({username:"jas",id:0})
     const [img,setImg] = useState("")
     const getItem = () => {
         axios.get(`${api_host}/items/${id}`)
         .then(function(response){
             setItem(response.data)
-
-            setImg(response.data.images[0].imageData)
+            console.log(response.data.user)
+            setSeller(response.data.user)
             
         })
         .catch(err => console.log(err))
@@ -25,6 +26,7 @@ function Item ({id}) {
             <ItemImage item_id={id}/>
             <h1>{item.name}</h1>
             <p>{item.desc}</p>
+            
         </div>
     )
 }
